@@ -3,7 +3,6 @@
 }
 
 .App-logo {
-
   animation: shake 2s infinite;
   animation-direction: alternate;
   height: 20vmin;
@@ -35,4 +34,8 @@
 
 .container, .container-fluid {
   margin-top: 20px
+}
+
+.movie-image {
+  height: 20vmin;
 }

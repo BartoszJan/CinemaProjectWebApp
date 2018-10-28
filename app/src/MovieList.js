@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Button, ButtonGroup, Container, Table } from 'reactstrap';
 import AppNavbar from './AppNavbar';
 import { Link } from 'react-router-dom';
+import image from './resorces/images/dark_night.jpg';
+import './resources/css/App.css';
 
 class MovieList extends Component {
 
@@ -28,7 +30,7 @@ class MovieList extends Component {
     const movieList = movies.map(movie => {
       const title = `${movie.title}`;
       return <tr key={movie.id}>
-        <td style={{whiteSpace: 'nowrap'}}>{movie.title}</td>
+        <td style={{whiteSpace: 'nowrap'}}><img src={image} className="movie-image" alt="image" /></td>
         <td>{title}</td>
         <td>
           <ButtonGroup>

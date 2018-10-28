@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Collapse, Nav, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from 'reactstrap';
 import { Link } from 'react-router-dom';
-import logo from './logo.svg';
-import './App.css';
+import logo from './resources/images/logo.svg';
+import './resources/css/App.css';
 
 export default class AppNavbar extends Component {
   constructor(props) {
