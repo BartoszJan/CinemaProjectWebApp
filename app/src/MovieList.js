@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Button, ButtonGroup, Container, Table } from 'reactstrap';
 import AppNavbar from './AppNavbar';
 import { Link } from 'react-router-dom';
-import image from './resorces/images/dark_night.jpg';
 import './resources/css/App.css';
 
 class MovieList extends Component {
@@ -14,7 +13,6 @@ class MovieList extends Component {
 
   componentDidMount() {
     this.setState({isLoading: true});
-
     fetch('api/movies')
       .then(response => response.json())
       .then(data => this.setState({movies: data, isLoading: false}));
@@ -29,8 +27,9 @@ class MovieList extends Component {
 
     const movieList = movies.map(movie => {
       const title = `${movie.title}`;
+      let img_src = require('./resources/images/dark_night.jpg');
       return <tr key={movie.id}>
-        <td style={{whiteSpace: 'nowrap'}}><img src={image} className="movie-image" alt="image" /></td>
+        <td style={{whiteSpace: 'nowrap'}}><img src={img_src} className="movie-image" alt="image" /></td>
         <td>{title}</td>
         <td>
           <ButtonGroup>
