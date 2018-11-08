@@ -10,7 +10,14 @@ class Home extends Component {
     return (
       <div>
         <AppNavbar/>
-        <MovieList/>
+            <div class="movies-left">
+                <MovieList/>
+            </div>
+            <div class="showings-right">
+                <Container fluid>
+                    <h3>Showings</h3>
+                </Container>
+            </div>
       </div>
     );
   }

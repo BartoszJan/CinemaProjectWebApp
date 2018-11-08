@@ -27,15 +27,12 @@ class MovieList extends Component {
 
     const movieList = movies.map(movie => {
       const title = `${movie.title}`;
-      let img_src = require('./resources/images/dark_night.jpg');
+      let img_src = require(`${movie.imageSource}`);
       return <tr key={movie.id}>
-        <td style={{whiteSpace: 'nowrap'}}><img src={img_src} className="movie-image" alt="image" /></td>
-        <td>{title}</td>
-        <td>
-          <ButtonGroup>
-            <Button size="sm" color="primary" tag={Link} to={"/movies/" + movie.id}>Go</Button>
-          </ButtonGroup>
-        </td>
+         <Button size="lg" block tag={Link} to={"/movies/" + movie.id}>
+             <td style={{whiteSpace: 'nowrap'}}><img src={img_src} className="movie-image" alt="image"/></td>
+             <td style={{whiteSpace: 'nowrap'}}>{title}</td>
+         </Button>
       </tr>
     });
 

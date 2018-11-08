@@ -39,3 +39,17 @@
 .movie-image {
   height: 20vmin;
 }
+
+.movies-left {
+  position: fixed;
+  width: 50%;
+  left: 0;
+  height: 100%;
+}
+
+.showings-right {
+  position: fixed;
+  width: 50%;
+  left: 50%;
+  height: 100%;
+}

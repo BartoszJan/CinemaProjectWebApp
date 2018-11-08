@@ -1,5 +1,6 @@
 package com.bjanczak.model;
 
+import lombok.Data;
 import org.hibernate.annotations.Proxy;
 
 import javax.persistence.*;
@@ -9,6 +10,7 @@ import java.util.List;
 @Entity
 @Table(name = "movie")
 @Proxy(lazy = false)
+@Data
 public class Movie {
 
     @Id
@@ -32,49 +34,11 @@ public class Movie {
     @Column(name = "director")
     private String director;
 
-    public int getId() {
-        return id;
-    }
+    @Column(name = "description")
+    private String description;
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public List<Showing> getShowings() {
-        return showings;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public LocalDate getYear() {
-        return year;
-    }
-
-    public void setYear(LocalDate year) {
-        this.year = year;
-    }
-
-    public int getDuration() {
-        return duration;
-    }
-
-    public void setDuration(int duration) {
-        this.duration = duration;
-    }
-
-    public String getDirector() {
-        return director;
-    }
-
-    public void setDirector(String director) {
-        this.director = director;
-    }
+    @Column(name = "image_source")
+    private String imageSource;
 
     @Override
     public String toString() {
